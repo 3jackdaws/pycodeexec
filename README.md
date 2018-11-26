@@ -1,6 +1,8 @@
 # PyCodeExec
 Simple python library that can execute arbitrary code from supported programming languages.
 
+[![Build Status](https://jenkins.isogen.net/buildStatus/icon?job=pycodeexec)](https://jenkins.isogen.net/job/pycodeexec/)
+
 # Usage
 
 ### Synchronous JavaScript 
