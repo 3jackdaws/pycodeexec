@@ -41,3 +41,13 @@ print(output)
 ```bash
 pip install pycodeexec
 ```
+
+# TODO
+* Execution limits
+* List supported languages
+* Come up with better names for everything
+* Stream output via generator or something
+* More supported languages
+
+# Contributing
+If anyone ever reads this, adding languages is really easy and that'd be an easy way to contribute.  Otherwise, submit a pull request.
