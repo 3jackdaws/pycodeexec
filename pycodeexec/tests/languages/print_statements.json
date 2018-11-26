@@ -1,0 +1,6 @@
+{
+  "python": "print('Hello, World!')",
+  "javascript": "console.log('Hello, World!')",
+  "ruby": "puts('Hello, World!')",
+  "c": "int main() { printf(\"Hello, World!\\n\"); }"
+}

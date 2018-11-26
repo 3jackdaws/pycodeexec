@@ -15,9 +15,9 @@ setup(
     author='Ian Murphy',
     author_email='3jackdaws@gmail.com',
     license='MIT',
-    packages=['sclib'],
+    packages=['pycodeexec'],
     python_requires='>=3.6',
-    install_requires=['docker'],
-    test_suite='pytest',
-    tests_require=['pytest', 'pytest-asyncio'],
+    install_requires=['docker', 'asgiref'],
+    test_suite='nose.collector',
+    tests_require=['asynctest', 'nose'],
 )

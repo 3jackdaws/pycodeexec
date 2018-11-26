@@ -1,28 +1,18 @@
 from . import sync
-from docker.transport.npipesocket import NpipeSocket
+from . import util
+from asyncio import sleep
+from asgiref.sync import sync_to_async
+
 
 class Runner(sync.Runner):
 
     def __init__(self, language, version='default'):
-        self.image, self.command = sync.get_image_command(language, version)
-        self.container = sync.client.containers.create(
-            self.image,
-            detach=True,
-            command="sleep 3600",
-        )
-        self.container.start()
+        super().__init__(language, version, block=False)
 
-    def __del__(self):
-        self.container.kill()
+    async def is_ready(self):
+        while not self.container:
+            await sleep(0.1)
 
-    async def get_output(self, code, decode=True):
-        sock = self.container.exec_run(
-            self.command.format(
-                code.replace('"', r'\"')
-            ),
-            socket=True
-        )[1]  # type: NpipeSocket
-        sock.setblocking(False)
-        while 1:
-            r = sock.recv(8192)
-            print(r)
+setattr(Runner, "get_output", sync_to_async(sync.Runner.get_output))
+
+
