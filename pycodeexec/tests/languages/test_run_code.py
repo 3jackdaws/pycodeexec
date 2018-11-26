@@ -39,3 +39,4 @@ class TestExecuteAsyncPrintStatements(asynctest.TestCase):
             await runner.is_ready()
             actual = (await runner.get_output(code)).strip()
             self.assertEqual(EXPECTED, actual)
+

@@ -20,7 +20,7 @@ def get_image_command(language, version):
 
 class Runner:
     def __init__(self, language, version='default', *, block=True):
-        self.image, self.command = get_image_command(language, version)
+        self.image, self.command = get_image_command(language.lower(), version.lower())
         self.container = None  # type: Container
         if block:
             self._run_container()

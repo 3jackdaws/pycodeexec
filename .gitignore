@@ -1,0 +1,3 @@
+pycodeexec.egg-info
+dist/*
+*.pyc
