@@ -1,5 +1,6 @@
 # PyCodeExec
-Simple python library that can execute arbitrary code from supported programming languages.
+Simple python library that can execute arbitrary code from supported programming languages via docker.
+#### Requires a local Docker install
 
 [![Build Status](https://jenkins.isogen.net/buildStatus/icon?job=pycodeexec)](https://jenkins.isogen.net/job/pycodeexec/)
 
